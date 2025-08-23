@@ -1,10 +1,12 @@
-document.querySelector('form').addEventListener('submit', function(e) {
-    const name = document.getElementById('name').value.trim();
-    const email = document.getElementById('email').value.trim();
-    const message = document.getElementById('message').value.trim();
-
-    if (name === '' || email === '' || message === '') {
-        e.preventDefault();
-        alert('Please fill in all fields.');
-    }
-});
+fetch("http://localhost:3000/api/quotes")
+  .then(res => res.json())
+  .then(data => {
+    const container = document.getElementById("quotes-container");
+    container.innerHTML = ""; // clear loading message
+    data.forEach(q => {
+      const block = document.createElement("blockquote");
+      block.textContent = `"${q.text}" — ${q.author || "Unknown"}`;
+      container.appendChild(block);
+    });
+  })
+  .catch(err => console.error(err));

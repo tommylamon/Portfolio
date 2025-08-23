@@ -256,3 +256,10 @@ footer {
     font-weight: bold;
     animation: fadeIn 2s ease;
 }
+#quotes-container blockquote {
+  margin: 10px 0;
+  padding: 10px;
+  border-left: 4px solid #333;
+  background: #f0f0f0;
+  border-radius: 5px;
+}
