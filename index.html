@@ -1,123 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>Portfolio | Tommon Crayton</title>
-  <link rel="stylesheet" href="portfolio body.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Portfolio</title>
+  <link rel="stylesheet" href="portfolio body.css">
 </head>
 <body>
-  <!-- Navigation -->
-  <!-- Navigation -->
+  <!-- ===== HEADER ===== -->
   <header>
+    <h1>My Portfolio</h1>
     <nav>
       <ul>
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">About</a></li>
         <li><a href="#projects">Projects</a></li>
-        <li><a href="#skills">Skills</a></li>
+        <li><a href="#about">About Me</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
   </header>
 
-  <!-- Home Section -->
-  <!-- Home Section -->
-  <section id="home">
-    <h1>Hi, I'm Tommon E. Crayton!!!</h1>
-    <p>Junior Software Engineer | JavaScript, PHP, SQL, HTML, CSS</p>
-    <a href="#projects" class="btn">View My Projects</a>
-  </section>
+  <!-- ===== MAIN CONTENT ===== -->
+  <main>
+    <section id="projects">
+      <h2>Projects</h2>
 
-  <!-- About Section -->
-  <section id="about">
-    <h2>About Me</h2>
-    <p>
-      I’m a junior software engineer with a passion for building responsive web applications.
-      I have experience in front-end and back-end development using JavaScript, PHP, and SQL.
-    </p>
-    <p>
-      I'm currently focused on expanding my full-stack skills and am open to job opportunities
-      that will help me grow as a developer.
-    </p>
-  </section>
+      <!-- Example Project -->
+      <div class="project-card">
+        <h3>Calculator</h3>
+        <p>A simple web-based calculator using HTML, CSS, and JavaScript.</p>
+        <a href="calculator.html" target="_blank">📂 Live Demo</a>
+        <br>
+        <a href="https://github.com/tommylamon" target="_blank">🔗 View on GitHub</a>
+      </div>
 
-  <!-- Projects Section -->
-  <section id="projects">
-    <h2>Projects</h2>
+      <!-- Example Project -->
+      <div class="project-card">
+        <h3>Task Manager</h3>
+        <p>A to-do list / task manager app built with JavaScript.</p>
+        <a href="task manager.html" target="_blank">📂 Live Demo</a>
+        <br>
+        <a href="https://github.com/tommylamon" target="_blank">🔗 View on GitHub</a>
+      </div>
 
-    <div class="project">
-      <h3>Project 1: Calculator</h3>
-      <p>A calculator to help with equations while multitasking other responsibilities.</p>
-      <!-- Proper relative link to calculator.html -->
-      <a href="calculator.html" target="_blank" rel="noopener noreferrer">View Calculator Project</a>
-      <a href="https://github.com/tommylamon/Portfolio/blob/main/calculator.html" target="_blank" rel="noopener noreferrer">View Github Code</a>
-    </div>
+      <!-- 🚀 New Project: Data Scraper API -->
+      <div class="project-card">
+        <h3>Data Scraper API</h3>
+        <p>A Node.js + Puppeteer project that scrapes quotes across multiple pages.</p>
+        <a href="scraper-demo.html" target="_blank">📂 Live Demo</a>
+        <br>
+        <a href="https://github.com/tommylamon/data-scraper-api" target="_blank">🔗 View on GitHub</a>
+      </div>
 
-    <div class="project">
-      <h3>Project 2: Task Manager App</h3>
-      <p>A JavaScript task manager with drag-and-drop functionality and local storage for persistence.</p>
-      <!-- Update this link accordingly -->
-      <a href="task manager.html" target="_blank" rel="noopener noreferrer" rel="noopener noreferrer">View Task Manager Project</a>
-      <br />
-      <a href="https://github.com/tommylamon/Portfolio/blob/main/task%20manager.html" target="_blank" rel="noopener noreferrer">View Code on GitHub</a>
-    </div>
-    <div class="project">
-  <h3>Project 3: Quote Scraper API</h3>
-  <p>
-    A Node.js project that scrapes quotes from the web and serves them through an API.
-    This portfolio is fetching live data from my backend.
-  </p>
+    </section>
 
-  <!-- Container for showing quotes -->
-  <div id="quotes-container" style="padding:10px; background:#f9f9f9; border-radius:8px; margin:10px 0;">
-    <em>Loading quotes...</em>
-  </div>
+    <!-- ===== ABOUT SECTION ===== -->
+    <section id="about">
+      <h2>About Me</h2>
+      <p>
+        Hi, I'm Tommon. I’m passionate about web development, problem-solving, 
+        and building creative projects ranging from simple apps to full-stack tools.
+      </p>
+    </section>
 
-  <a href="https://github.com/tommylamon/data-scraper-api" 
-     target="_blank" rel="noopener noreferrer">
-     View Code on GitHub
-  </a>
-</div>
-  </section>
+    <!-- ===== CONTACT SECTION ===== -->
+    <section id="contact">
+      <h2>Contact</h2>
+      <p>Email: <a href="mailto:youremail@example.com">youremail@example.com</a></p>
+      <p>GitHub: <a href="https://github.com/tommylamon" target="_blank">github.com/tommylamon</a></p>
+    </section>
+  </main>
 
-  <!-- Skills Section -->
-  <!-- Skills Section -->
-  <section id="skills">
-    <h2>Skills</h2>
-    <ul>
-      <li>JavaScript</li>
-      <li>PHP</li>
-      <li>SQL (MySQL)</li>
-      <li>HTML5 &amp; CSS3</li>
-      <li>Git &amp; GitHub</li>
-    </ul>
-  </section>
-
-  <!-- Contact Section -->
-  <!-- Contact Section -->
-  <section id="contact">
-    <h2>Contact Me</h2>
-    <form action="your-backend-script.php" method="post">
-      <label for="name">Name:</label>
-      <input type="text" id="name" name="name" required />
-
-      <label for="email">Email:</label>
-      <input type="email" id="email" name="email" required />
-
-      <label for="message">Message:</label>
-      <textarea id="message" name="message" required></textarea>
-
-      <button type="submit">Send Message</button>
-    </form>
-  </section>
-
-  <!-- Footer -->
-  <!-- Footer -->
+  <!-- ===== FOOTER ===== -->
   <footer>
-    <p>&copy; 2025 Tommon E. Crayton - Junior Software Engineer</p>
+    <p>&copy; 2025 Tommon Equibulon Crayton. All rights reserved.</p>
   </footer>
-
-  <script src="java portfolio.js"></script>
 </body>
 </html>
