@@ -1,0 +1,4 @@
+exclude:
+  - node_modules
+  - server/node_modules
+  - data scraper api/node_modules
