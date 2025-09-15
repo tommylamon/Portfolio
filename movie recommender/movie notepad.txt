@@ -1,0 +1,7 @@
+title,genre,description
+The Matrix,Sci-Fi,A hacker discovers reality is a simulation
+Inception,Sci-Fi,A thief enters dreams to steal secrets
+Titanic,Romance,A love story on the ill-fated Titanic
+The Notebook,Romance,A young couple falls in love in the 1940s
+John Wick,Action,An ex-hitman seeks revenge after his dog is killed
+Mad Max: Fury Road,Action,A post-apocalyptic road warrior fights for survival

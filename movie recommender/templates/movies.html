@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Movie Recommender</title>
+</head>
+<body>
+    <h1>Movie Recommender</h1>
+
+    <form method="POST" action="/search">
+        <input type="text" name="movie" placeholder="Enter a movie title">
+        <button type="submit">Search</button>
+    </form>
+
+    {% if recommendations %}
+        <h2>Recommendations for "{{ query }}":</h2>
+        <ul>
+            {% for movie in recommendations %}
+                <li>{{ movie }}</li>
+            {% endfor %}
+        </ul>
+    {% elif error %}
+        <p>{{ error }}</p>
+    {% endif %}
+</body>
+</html>
