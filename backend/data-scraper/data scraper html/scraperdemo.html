@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Scraper Demo</title>
+  <link rel="stylesheet" href="portfolio body.css">
+</head>
+<body>
+  <header>
+    <h1>Data Scraper API – Demo</h1>
+  </header>
+
+  <main>
+    <p>This demo shows some sample data scraped using Puppeteer.</p>
+
+    <!-- Example: local demo table -->
+    <table border="1" cellpadding="8">
+      <thead>
+        <tr>
+          <th>Quote</th>
+          <th>Author</th>
+        </tr>
+      </thead>
+      <tbody id="quotes-table">
+        <!-- Data will appear here -->
+      </tbody>
+    </table>
+
+    <button onclick="loadQuotes()">Load Sample Data</button>
+  </main>
+
+  <script>
+    async function loadQuotes() {
+      try {
+        // Example: fetch from your backend
+        // Change localhost:3000 to your deployed API later
+       const res = await fetch("https://your-scraper.onrender.com/scrape");
+        const data = await res.json();
+
+        const table = document.getElementById("quotes-table");
+        table.innerHTML = "";
+
+        data.forEach(item => {
+          const row = document.createElement("tr");
+          row.innerHTML = `
+            <td>${item.text}</td>
+            <td>${item.author}</td>
+          `;
+          table.appendChild(row);
+        });
+      } catch (err) {
+        console.error(err);
+        alert("Error loading scraped data. Make sure the server is running!");
+      }
+    }
+  </script>
+</body>
+</html>
